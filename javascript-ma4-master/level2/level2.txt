@@ -1,0 +1,72 @@
+1. What is the DOM?
+The Document Object Model is an interface to all web pages. The DOM allows you to read and manipulate the structure, content and the style of the website page. A HTML document can be represented through a node tree. This makes it easier to read and see the structure of each element. Each branch on this tree are elements, then you have the content within these elements. With JavaScript we can manipulate the DOM by adding HTML elements, delete HTML elements or we can update HTML elements.
+2. List three methods to manipulate the DOM.
+
+/*---- changing the h1 element ----*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - manipulation</title>
+</head>
+<body>  
+    <h1 class="main-title">Document Object Module</h1>
+    <script>
+        document.querySelector(".main-title").innerHTML = "DOM!"
+    </script>
+</body>
+</html>
+
+/*---- giving the div a colour ----*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - manipulation</title>
+</head>
+<body>  
+    <div id="contentColour">
+        <h1 class="main-title">Document Object Module</h1>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var myElement = document.getElementById('contentColour');
+            myElement.style.backgroundColor = "yellow";
+        });
+    </script>
+</body>
+</html>
+
+/*---- adding a second class to the class list ----*/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - manipulation</title>
+</head>
+<body> 
+    <h1 class="main-title">Document Object Module</h1>
+    <script>
+        document.querySelector(".main-title").classList.add("new-class")
+    </script>
+</body>
+</html>
+
+3. What is an asynchronous call?
+In difference to Synchronous, the Asynchronous calls do not wait for the API to return from the server. Whenever a call returns, then a call back function is executed. These can be helpful when tasks are time-consuming. 
+4. Briefly explain what the sources tab in Chromes Developers Tools does.
+The source tab allows you to add breakpoints to a specific line of code inside your file. A breakpoint basically stops code from executing. Which means you will have to manually iterate over the code so you can see where the problem is. This is great if you want to look for eventual problems and issues with your code. This will save us a lot of time with handling our code. 
+5. What is a JavaScript promise?
+JavaScript promises shows the eventual result of an asynchronous process. It is great to use promises because it gives us a simple way of composing, executing etc. It allows us to work with asynchronous errors. A promise in JavaScript can either be pending, state of the promise, fulfilled where it is a state of a successful operation or it can be rejected where the state of the promise is not successful (failed). When the promise is either fulfilled or rejected, it means that it cannot be changed again. 
+6. What is an API?
+API stands for Application Programming Interface and makes coding easier for all developers. The API shows a list of data that can be connected directly to the JavaScript file instead of writing bunch of code. That does not mean you don’t have to write code, but it makes coding much easier and you can write less code. 
+7. What is a JavaScript Event?
+JavaScript Event is basically something happening when the user or browser manipulates the web page. There are many different events which can appear, like a web page that has finished loading, something in an HTML document has changed or a button has been clicked. 
+8. What is event bubbling?
+We call this bubbling because it starts from the inner element, then it bubbles itself up through parents and to the surface. An event is found in the inner element and then grows (bubbles) to the outer elements. 
